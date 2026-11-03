@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="weather-container">
+        <header>
+            <h1>Weather Dashboard 🌦️</h1>
+            <p>Check the current weather in your city</p>
+        </header>
+
+        <form id="search-form">
+            <input
+                type="text"
+                id="city-input"
+                placeholder="Enter city name..."
+                autocomplete="off"
+                required
+            >
+            <button type="submit" id="search-btn">Search</button>
+        </form>
+
+        <p id="message" role="status"></p>
+
+        <section id="weather-result" class="weather-result" hidden>
+            <h2 id="city-name"></h2>
+            <p id="weather-description"></p>
+
+            <div class="temperature">
+                <span id="temperature"></span>
+                <span>°C</span>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail-card">
+                    <span>💧</span>
+                    <h3>Humidity</h3>
+                    <p id="humidity"></p>
+                </div>
+
+                <div class="detail-card">
+                    <span>💨</span>
+                    <h3>Wind Speed</h3>
+                    <p id="wind-speed"></p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Weather Dashboard | Powered by Open-Meteo API</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
